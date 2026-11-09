@@ -1,0 +1,18 @@
+{
+  "name": "Tributary on Studionet",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": { "version": "20" }
+  },
+  "postCreateCommand": "bash scripts/setup.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-python.python"]
+    }
+  },
+  "secrets": {
+    "ALICE_KEY": { "description": "Private key (0x...) of the account that registers the original works" },
+    "BOB_KEY": { "description": "Private key (0x...) of the account that registers derivatives and the disputed copy" },
+    "CAROL_KEY": { "description": "Private key (0x...) of the account that files disputes and buys licences" }
+  }
+}
